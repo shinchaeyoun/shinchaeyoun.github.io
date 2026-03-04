@@ -63,14 +63,10 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     font-family: 'Outfit','Arial', sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    // line-height: 1.6;
   }
   h1 {
     font-size: 2em;
     margin-bottom: 0.5em;
-  }
-  p {
-    // margin-bottom: 1em;
   }
   a {
     color: #007bff;
@@ -106,8 +102,9 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     border: 2px solid #d0021b;
     width: 100%; height: 100%;
   }
-}
 
+  
+}
 `,dg={basic:"#707070",point:"#d0021b",outfit:"Outfit",paperlogy:"Paperlogy"},v0={mbl:480,tab:768,desk:1020,deskL:1280},hg=Object.keys(v0).reduce((u,c)=>(u[c]=(...r)=>Zi`
     @media screen and (max-width: ${v0[c]}px) {
       ${Zi(...r)};
@@ -122,6 +119,14 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
 
   display: grid;
   grid-template-columns: 150px 1fr;
+
+  transition: 0.3s ease;
+
+  @media (min-width: 1440px) {
+  grid-template-columns: 300px 1fr;
+    // padding: 30px 400px;
+    padding-right: 200px;
+  }
 `,pg=Ct.nav`
   font-size: 16px;
   font-weight: 600;
@@ -176,20 +181,23 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
     }
   }
 `,gg=Ct.main`
-  // height: 300vh;
+  > div {
+    margin-bottom: 200px;
+
+  }
+  > div:last-child {
+    margin-bottom: 0;
+  }
 `,Sg=Ct.div`
   margin-top:30px;
 `,bg=Ct.footer`
   height: calc(100vh - 60px);
 
-  // font-family: ${({theme:u})=>u.outfit}, sans-serif;
-
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
-  // height: 100%;
-
+  margin-bottom: 10px;
 
   div {
     font-size: 16px;
@@ -256,7 +264,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
       }
      }
   }
-`,Or={Wrap:Eg,Block:xg},Ag=()=>H.jsxs(Or.Wrap,{children:[H.jsx(Or.Block,{$type:"img",children:"images"}),H.jsxs(Or.Block,{$type:"desc",children:[H.jsxs("div",{className:"title",children:["디자인을 이해하는 개발자,",H.jsx("br",{}),"개발을 이해하는 퍼블리셔.",H.jsx("br",{}),"신채연입니다."]}),H.jsx("div",{class:"introduce",children:H.jsx("p",{children:"안녕하세요 퍼블리셔 신채연입니다. 웹 퍼블리싱을 공부하며, 단순 디자인만이 중요한것이 UI 디자인과 사용자를 위한 설계, 추구하고자 하는 목표를 웹 표준, 웹 접근성, 크로스 브라우징, 시멘틱 마크업 원칙에 맞추어 정확하게 담아내는 것이 중요하다는 것을 배울 수 있었습니다."})}),H.jsxs("div",{class:"profile",children:[H.jsx("div",{class:"tit",children:"Profile"}),H.jsxs("ul",{children:[H.jsxs("ol",{children:[H.jsx("li",{children:"이름"}),H.jsx("li",{children:"생년월일"}),H.jsx("li",{children:"주소"}),H.jsx("li",{children:"연락처"}),H.jsx("li",{children:"이메일"})]}),H.jsxs("ol",{children:[H.jsx("li",{children:"신채연"}),H.jsx("li",{children:"1998.02.17"}),H.jsx("li",{children:"서울시 강서구"}),H.jsx("li",{children:"010-9230-9218"}),H.jsx("li",{children:"8217shin@gmail.com"})]})]})]}),H.jsxs("div",{class:"skills",children:[H.jsx("div",{class:"tit",children:"Skills"}),H.jsx("span",{children:"HTML"})," ",H.jsx("span",{children:"CSS"})," ",H.jsx("span",{children:"SCSS"}),H.jsx("span",{children:"javascript"})," ",H.jsx("span",{children:"jQuery"}),H.jsx("span",{children:"photoshop"})," ",H.jsx("span",{children:"illustrator"}),H.jsx("span",{children:"figma"})," ",H.jsx("span",{children:"XD"}),H.jsx("span",{children:"vue"})," ",H.jsx("span",{children:"react"})]}),H.jsxs("div",{class:"licens",children:[H.jsx("div",{class:"tit",children:"Licens"}),H.jsxs("ul",{children:[H.jsxs("ol",{children:[H.jsx("li",{children:"2015"}),H.jsx("li",{children:"2013"}),H.jsx("li",{children:"2013"})]}),H.jsxs("ol",{children:[H.jsx("li",{children:"컴퓨터그래픽스운용기능사"}),H.jsx("li",{children:"gtq 그래픽기술자격2급"}),H.jsx("li",{children:"gtq 일러스트2급"})]})]})]})]})]}),Tg=Ct(be.Wrap)``,Rg=Ct(be.GridContainer)`
+`,Or={Wrap:Eg,Block:xg},Ag=()=>H.jsxs(Or.Wrap,{children:[H.jsx(Or.Block,{$type:"img"}),H.jsxs(Or.Block,{$type:"desc",children:[H.jsxs("div",{className:"title",children:["디자인을 이해하는 개발자,",H.jsx("br",{}),"개발을 이해하는 퍼블리셔.",H.jsx("br",{}),"신채연입니다."]}),H.jsx("div",{class:"introduce",children:H.jsx("p",{children:"안녕하세요 퍼블리셔 신채연입니다. 웹 퍼블리싱을 공부하며, 단순 디자인만이 중요한것이 UI 디자인과 사용자를 위한 설계, 추구하고자 하는 목표를 웹 표준, 웹 접근성, 크로스 브라우징, 시멘틱 마크업 원칙에 맞추어 정확하게 담아내는 것이 중요하다는 것을 배울 수 있었습니다."})}),H.jsxs("div",{class:"profile",children:[H.jsx("div",{class:"tit",children:"Profile"}),H.jsxs("ul",{children:[H.jsxs("ol",{children:[H.jsx("li",{children:"이름"}),H.jsx("li",{children:"생년월일"}),H.jsx("li",{children:"주소"}),H.jsx("li",{children:"연락처"}),H.jsx("li",{children:"이메일"})]}),H.jsxs("ol",{children:[H.jsx("li",{children:"신채연"}),H.jsx("li",{children:"1998.02.17"}),H.jsx("li",{children:"서울시 강서구"}),H.jsx("li",{children:"010-9230-9218"}),H.jsx("li",{children:"8217shin@gmail.com"})]})]})]}),H.jsxs("div",{class:"skills",children:[H.jsx("div",{class:"tit",children:"Skills"}),H.jsx("span",{children:"HTML"})," ",H.jsx("span",{children:"CSS"})," ",H.jsx("span",{children:"SCSS"}),H.jsx("span",{children:"javascript"})," ",H.jsx("span",{children:"jQuery"}),H.jsx("span",{children:"photoshop"})," ",H.jsx("span",{children:"illustrator"}),H.jsx("span",{children:"figma"})," ",H.jsx("span",{children:"XD"}),H.jsx("span",{children:"vue"})," ",H.jsx("span",{children:"react"})]}),H.jsxs("div",{class:"licens",children:[H.jsx("div",{class:"tit",children:"Licens"}),H.jsxs("ul",{children:[H.jsxs("ol",{children:[H.jsx("li",{children:"2015"}),H.jsx("li",{children:"2013"}),H.jsx("li",{children:"2013"})]}),H.jsxs("ol",{children:[H.jsx("li",{children:"컴퓨터그래픽스운용기능사"}),H.jsx("li",{children:"gtq 그래픽기술자격2급"}),H.jsx("li",{children:"gtq 일러스트2급"})]})]})]})]})]}),Tg=Ct(be.Wrap)``,Rg=Ct(be.GridContainer)`
   grid-template-columns: 2fr 1fr;
   align-items: end;
   gap: 60px 20px;
