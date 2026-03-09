@@ -7,7 +7,7 @@ import I from "./Intro.styles.jsx";
 const Intro = () => {
   return (
     <I.Wrap>
-      <I.Block $type="img">images</I.Block>
+      <I.Block $type="img"></I.Block>
       <I.Block $type="desc">
         <div className="title">
           디자인을 이해하는 개발자,

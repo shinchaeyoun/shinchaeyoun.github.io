@@ -22,8 +22,13 @@ const InnerFrame = styled.div`
 
   display: grid;
   grid-template-columns: 150px 1fr;
-`;
 
+  transition: all 0.3s ease;
+
+  ${media.deskXL`
+    grid-template-columns: 200px 1fr;
+  `}
+`;
 const Nav = styled.nav`
   font-size: 16px;
   font-weight: 600;
@@ -80,26 +85,29 @@ const Nav = styled.nav`
 `;
 
 const Main = styled.main`
-  // height: 300vh;
+  > div {
+    margin-bottom: 100px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ${media.deskXL`
+    padding-right: 150px;
+  `}
 `;
 
 const Wrap = styled.div`
-  margin-top:30px;
+  margin-top: 30px;
 `;
-
-
 
 const Footer = styled.footer`
   height: calc(100vh - 60px);
-
-  // font-family: ${({ theme }) => theme.outfit}, sans-serif;
 
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
-  // height: 100%;
-
 
   div {
     font-size: 16px;

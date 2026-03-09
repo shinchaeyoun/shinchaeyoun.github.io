@@ -9,6 +9,7 @@ const GridItem = styled(S.GridContainer)`
   grid-template-columns: 2fr 1fr;
   align-items: end;
   gap: 60px 20px;
+
 `;
 
 const Block = styled(S.GridItem)``;
@@ -19,7 +20,6 @@ const ImgBlock = styled(Block)`
 
   img {
     width: 100%;
-    // height: 100%;
   }
 `;
 
