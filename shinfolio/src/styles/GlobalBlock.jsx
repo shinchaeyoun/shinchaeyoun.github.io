@@ -102,6 +102,7 @@ const Wrap = styled.div`
 `;
 
 const Footer = styled.footer`
+padding-bottom: 30px;
   height: calc(100vh - 60px);
 
   display: flex;
