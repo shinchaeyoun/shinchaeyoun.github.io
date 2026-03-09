@@ -19,8 +19,6 @@ const media = Object.keys(sizes).reduce((acc, label) => {
     }
     return ""; // 안전 장치 추가
   };
-  console.log('acc',acc);
-  
   return acc;
 }, {});
 

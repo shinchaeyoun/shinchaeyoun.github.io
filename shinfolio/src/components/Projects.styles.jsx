@@ -10,16 +10,27 @@ const GridItem = styled(S.GridContainer)`
   align-items: end;
   gap: 60px 20px;
 
+  margin-bottom: 100px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Block = styled(S.GridItem)``;
 
 const ImgBlock = styled(Block)`
   height: 460px;
-  overflow: scroll;
+  overflow-y: scroll;
 
-  img {
-    width: 100%;
+  // transform: translateY(20px);
+  // transition: 0.5s;
+  // transition-delay: 0.5s;
+
+  a {
+    img {
+      width: 100%;
+    }
   }
 `;
 
