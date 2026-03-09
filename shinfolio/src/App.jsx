@@ -13,6 +13,23 @@ const App = () => {
   const contactRef = useRef(null);
   const [activeMenu, setActiveMenu] = useState("");
 
+  const hanbleNavClick = (section) => {
+    const sectionRef = {
+      About: aboutRef,
+      Project: projectRef,
+      Career: careerRef,
+      Contact: contactRef,
+    }[section];
+    
+    if (sectionRef && sectionRef.current) {
+      const targetPosition = sectionRef.current.offsetTop - 60; // 요소의 위치 - 60px (헤더 높이 고려)
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     const sections = [
       { ref: aboutRef, name: "About" },
@@ -23,18 +40,23 @@ const App = () => {
 
     const observer = new window.IntersectionObserver(
       (entries) => {
-        // 가장 먼저 화면에 보이는 섹션을 active로
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
         if (visible.length > 0) {
           const found = sections.find(
             (section) => section.ref.current === visible[0].target
           );
-          if (found) setActiveMenu(found.name);
+          if (found) {
+            setActiveMenu(found.name);
+          }
         }
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50% 0px",
+      }
     );
 
     sections.forEach((section) => {
@@ -53,10 +75,18 @@ const App = () => {
           CHAE YEUN
         </div>
         <ul>
-          <li className={activeMenu === "About" ? "active" : ""}>About me</li>
-          <li className={activeMenu === "Project" ? "active" : ""}>Project</li>
-          <li className={activeMenu === "Career" ? "active" : ""}>Career</li>
-          <li className={activeMenu === "Contact" ? "active" : ""}>Contact</li>
+          <li onClick={() => hanbleNavClick("About")} className={activeMenu === "About" ? "active" : ""}>
+            About me
+          </li>
+          <li onClick={() => hanbleNavClick("Project")} className={activeMenu === "Project" ? "active" : ""}>
+            Project
+          </li>
+          <li onClick={() => hanbleNavClick("Career")} className={activeMenu === "Career" ? "active" : ""}>
+            Career
+          </li>
+          <li onClick={() => hanbleNavClick("Contact")} className={activeMenu === "Contact" ? "active" : ""}>
+            Contact
+          </li>
         </ul>
         <span id="arrow"></span>
       </S.Nav>

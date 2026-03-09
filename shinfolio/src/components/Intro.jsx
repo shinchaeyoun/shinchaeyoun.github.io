@@ -17,7 +17,7 @@ const Intro = () => {
           신채연입니다.
         </div>
 
-        <div class="introduce">
+        <div className="introduce">
           <p>
             안녕하세요 퍼블리셔 신채연입니다. 웹 퍼블리싱을 공부하며, 단순
             디자인만이 중요한것이 UI 디자인과 사용자를 위한 설계, 추구하고자
@@ -27,8 +27,8 @@ const Intro = () => {
           </p>
         </div>
 
-        <div class="profile">
-          <div class="tit">Profile</div>
+        <div className="profile">
+          <div className="tit">Profile</div>
           <ul>
             <ol>
               <li>이름</li>
@@ -47,8 +47,8 @@ const Intro = () => {
           </ul>
         </div>
 
-        <div class="skills">
-          <div class="tit">Skills</div>
+        <div className="skills">
+          <div className="tit">Skills</div>
           <span>HTML</span> <span>CSS</span> <span>SCSS</span>
           <span>javascript</span> <span>jQuery</span>
           <span>photoshop</span> <span>illustrator</span>
@@ -56,8 +56,8 @@ const Intro = () => {
           <span>vue</span> <span>react</span>
         </div>
 
-        <div class="licens">
-          <div class="tit">Licens</div>
+        <div className="licens">
+          <div className="tit">Licens</div>
 
           <ul>
             <ol>
