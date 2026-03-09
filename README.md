@@ -1,1 +1,0 @@
-# shinchaeyoun.github.io
