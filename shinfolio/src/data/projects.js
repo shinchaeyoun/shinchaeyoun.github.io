@@ -93,7 +93,7 @@ const projectsData = [
   },
   {
     link: "https://shinchaeyoun.github.io/momentum/index.html",
-    thumnail: "./images/project/momentum_fullpage.png",
+    thumnail: "./images/project/momentum_faullpage.png",
     title: "momentum",
     type: "클론사이트",
     languageUsed: "HTML, CSS, JavaScript",

@@ -11,7 +11,10 @@ const Career = () => {
   return (
     <S.Wrap>
       <C.GridContainer>
-        {data.map((item, index) => (
+        {data.map((item, index) => {
+          console.log('item', item);
+          
+          return(
           <C.GridItem key={index}>
             <div className="title">
               <p>{item.company}</p>
@@ -31,7 +34,7 @@ const Career = () => {
               </p>
             </div>
           </C.GridItem>
-        ))}
+        )})}
       </C.GridContainer>
     </S.Wrap>
   );
