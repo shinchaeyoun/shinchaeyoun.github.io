@@ -77,7 +77,7 @@ const projectsData = [
       "첫번째 프로젝트라 제작기간이 길어졌지만 슬라이드 API를 사용하여 손쉽게 퀄리티 높은 슬라이드를 구성할 수 있었습니다. 처음으로 완성시킨 프로젝라 더욱 집중하여 만들어 보았습니다. 제작기간은 9일 소요되었습니다."
   },
   {
-    link: "https://shinchaeyoun.github.io/canvas/index.html",
+    link: "https://shinchaeyoun.github.io/canvas/canvas01.html",
     thumnail: "./images/project/canvas.png",
     title: "canvas",
     type: "클론사이트",
