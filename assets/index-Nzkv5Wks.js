@@ -195,6 +195,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
 `,S1=Ct.div`
   margin-top: 30px;
 `,b1=Ct.footer`
+padding-bottom: 30px;
   height: calc(100vh - 60px);
 
   display: flex;
